@@ -6,21 +6,12 @@ public class Moneda : MonoBehaviour
 {   
     public int valor = 1;
     public GameManager gM;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter2D(Collider2D collision) {
 
         if (collision.CompareTag("Player")){
+
+            gM.sumaPuntos(valor);
             Destroy(this.gameObject);
         }
     }

@@ -8,6 +8,7 @@ public class CharacterController : MonoBehaviour{
     public float jumpForce;
     public int saltoMax;
     public LayerMask Ground;
+    public AudioManager aM;
 
     private bool ViewRight = true;
     private Rigidbody2D rb;
