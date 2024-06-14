@@ -276,7 +276,8 @@ MonoBehaviour:
   Ground:
     serializedVersion: 2
     m_Bits: 256
-  aM: {fileID: 0}
+  aM: {fileID: 1420290426}
+  sonidoSalto: {fileID: 8300000, guid: a203bc722d5d26e44a680197680c1978, type: 3}
 --- !u!95 &810494
 Animator:
   serializedVersion: 5
@@ -387,7 +388,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0.00000047683716, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -505,7 +506,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 523294847}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0.00000047683716, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -676,9 +677,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 660959267}
     m_Modifications:
     - target: {fileID: 4613283942686543387, guid: 86ba3cf7b3194b4458ae57e9c3744a1b, type: 3}
+      propertyPath: aM
+      value: 
+      objectReference: {fileID: 1420290426}
+    - target: {fileID: 4613283942686543387, guid: 86ba3cf7b3194b4458ae57e9c3744a1b, type: 3}
       propertyPath: gM
       value: 
       objectReference: {fileID: 698274093}
+    - target: {fileID: 4613283942686543387, guid: 86ba3cf7b3194b4458ae57e9c3744a1b, type: 3}
+      propertyPath: sonidoPuntos
+      value: 
+      objectReference: {fileID: 8300000, guid: d4849eeaf5201a541b8006a7588d4926, type: 3}
     - target: {fileID: 4613283942686543388, guid: 86ba3cf7b3194b4458ae57e9c3744a1b, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1989,9 +1998,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 660959267}
     m_Modifications:
     - target: {fileID: 4613283942686543387, guid: 86ba3cf7b3194b4458ae57e9c3744a1b, type: 3}
+      propertyPath: aM
+      value: 
+      objectReference: {fileID: 1420290426}
+    - target: {fileID: 4613283942686543387, guid: 86ba3cf7b3194b4458ae57e9c3744a1b, type: 3}
       propertyPath: gM
       value: 
       objectReference: {fileID: 698274093}
+    - target: {fileID: 4613283942686543387, guid: 86ba3cf7b3194b4458ae57e9c3744a1b, type: 3}
+      propertyPath: sonidoPuntos
+      value: 
+      objectReference: {fileID: 8300000, guid: d4849eeaf5201a541b8006a7588d4926, type: 3}
     - target: {fileID: 4613283942686543388, guid: 86ba3cf7b3194b4458ae57e9c3744a1b, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -2050,9 +2067,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 660959267}
     m_Modifications:
     - target: {fileID: 4613283942686543387, guid: 86ba3cf7b3194b4458ae57e9c3744a1b, type: 3}
+      propertyPath: aM
+      value: 
+      objectReference: {fileID: 1420290426}
+    - target: {fileID: 4613283942686543387, guid: 86ba3cf7b3194b4458ae57e9c3744a1b, type: 3}
       propertyPath: gM
       value: 
       objectReference: {fileID: 698274093}
+    - target: {fileID: 4613283942686543387, guid: 86ba3cf7b3194b4458ae57e9c3744a1b, type: 3}
+      propertyPath: sonidoPuntos
+      value: 
+      objectReference: {fileID: 8300000, guid: d4849eeaf5201a541b8006a7588d4926, type: 3}
     - target: {fileID: 4613283942686543388, guid: 86ba3cf7b3194b4458ae57e9c3744a1b, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2111,9 +2136,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 660959267}
     m_Modifications:
     - target: {fileID: 4613283942686543387, guid: 86ba3cf7b3194b4458ae57e9c3744a1b, type: 3}
+      propertyPath: aM
+      value: 
+      objectReference: {fileID: 1420290426}
+    - target: {fileID: 4613283942686543387, guid: 86ba3cf7b3194b4458ae57e9c3744a1b, type: 3}
       propertyPath: gM
       value: 
       objectReference: {fileID: 698274093}
+    - target: {fileID: 4613283942686543387, guid: 86ba3cf7b3194b4458ae57e9c3744a1b, type: 3}
+      propertyPath: sonidoPuntos
+      value: 
+      objectReference: {fileID: 8300000, guid: d4849eeaf5201a541b8006a7588d4926, type: 3}
     - target: {fileID: 4613283942686543388, guid: 86ba3cf7b3194b4458ae57e9c3744a1b, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2822,9 +2855,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 660959267}
     m_Modifications:
     - target: {fileID: 4613283942686543387, guid: 86ba3cf7b3194b4458ae57e9c3744a1b, type: 3}
+      propertyPath: aM
+      value: 
+      objectReference: {fileID: 1420290426}
+    - target: {fileID: 4613283942686543387, guid: 86ba3cf7b3194b4458ae57e9c3744a1b, type: 3}
       propertyPath: gM
       value: 
       objectReference: {fileID: 698274093}
+    - target: {fileID: 4613283942686543387, guid: 86ba3cf7b3194b4458ae57e9c3744a1b, type: 3}
+      propertyPath: sonidoPuntos
+      value: 
+      objectReference: {fileID: 8300000, guid: d4849eeaf5201a541b8006a7588d4926, type: 3}
     - target: {fileID: 4613283942686543388, guid: 86ba3cf7b3194b4458ae57e9c3744a1b, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -2888,9 +2929,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 660959267}
     m_Modifications:
     - target: {fileID: 4613283942686543387, guid: 86ba3cf7b3194b4458ae57e9c3744a1b, type: 3}
+      propertyPath: aM
+      value: 
+      objectReference: {fileID: 1420290426}
+    - target: {fileID: 4613283942686543387, guid: 86ba3cf7b3194b4458ae57e9c3744a1b, type: 3}
       propertyPath: gM
       value: 
       objectReference: {fileID: 698274093}
+    - target: {fileID: 4613283942686543387, guid: 86ba3cf7b3194b4458ae57e9c3744a1b, type: 3}
+      propertyPath: sonidoPuntos
+      value: 
+      objectReference: {fileID: 8300000, guid: d4849eeaf5201a541b8006a7588d4926, type: 3}
     - target: {fileID: 4613283942686543388, guid: 86ba3cf7b3194b4458ae57e9c3744a1b, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3070,9 +3119,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 660959267}
     m_Modifications:
     - target: {fileID: 4613283942686543387, guid: 86ba3cf7b3194b4458ae57e9c3744a1b, type: 3}
+      propertyPath: aM
+      value: 
+      objectReference: {fileID: 1420290426}
+    - target: {fileID: 4613283942686543387, guid: 86ba3cf7b3194b4458ae57e9c3744a1b, type: 3}
       propertyPath: gM
       value: 
       objectReference: {fileID: 698274093}
+    - target: {fileID: 4613283942686543387, guid: 86ba3cf7b3194b4458ae57e9c3744a1b, type: 3}
+      propertyPath: sonidoPuntos
+      value: 
+      objectReference: {fileID: 8300000, guid: d4849eeaf5201a541b8006a7588d4926, type: 3}
     - target: {fileID: 4613283942686543388, guid: 86ba3cf7b3194b4458ae57e9c3744a1b, type: 3}
       propertyPath: m_RootOrder
       value: 6

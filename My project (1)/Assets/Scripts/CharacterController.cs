@@ -9,6 +9,7 @@ public class CharacterController : MonoBehaviour{
     public int saltoMax;
     public LayerMask Ground;
     public AudioManager aM;
+    public AudioClip sonidoSalto;
 
     private bool ViewRight = true;
     private Rigidbody2D rb;
@@ -48,6 +49,7 @@ public class CharacterController : MonoBehaviour{
             saltoRestante--;
             rb.velocity = new Vector2(rb.velocity.x, 0f);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            aM.PlaySound(sonidoSalto);
         }
     }
     void movimiento(){
@@ -59,8 +61,6 @@ public class CharacterController : MonoBehaviour{
         }
         direccion(inputMovimiento);
         rb.velocity = new Vector2(inputMovimiento * Speed, rb.velocity.y);
-
-        
     }
 
     void direccion(float inputMovimiento){
