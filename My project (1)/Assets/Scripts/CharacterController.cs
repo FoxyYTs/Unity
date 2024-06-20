@@ -9,7 +9,7 @@ public class CharacterController : MonoBehaviour{
     public int saltoMax;
     public LayerMask Ground;
     public AudioManager aM;
-    public AudioClip sonidoSalto;
+    public AudioClip sonidoSalto, sonidoCaminar;
 
     private bool ViewRight = true;
     private Rigidbody2D rb;
@@ -56,6 +56,7 @@ public class CharacterController : MonoBehaviour{
         float inputMovimiento = Input.GetAxis("Horizontal");
         if(inputMovimiento != 0){
             anime.SetBool("corriendo", true);
+            aM.PlaySound(sonidoCaminar);
         }else{
             anime.SetBool("corriendo", false);
         }
