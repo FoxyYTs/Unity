@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour{   
@@ -29,6 +30,18 @@ public class GameManager : MonoBehaviour{
     
     public void restaVida(){
         vidas--;
+        if(vidas == 0){
+            SceneManager.LoadScene(0);
+        }
         hub.DesactivarVidas(vidas);
+    }
+
+    public bool sumaVida(){
+        if(vidas == 3){
+            return false;
+        } 
+        hub.ActivarVidas(vidas);
+        vidas++;
+        return true;
     }
 }
