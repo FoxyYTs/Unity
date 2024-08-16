@@ -6,17 +6,17 @@ public class CharacterController : MonoBehaviour{
 
     public float Speed;
     public float jumpForce;
+    public float punchForce;
     public int saltoMax;
     public LayerMask Ground;
-    public AudioManager aM;
-    public AudioClip sonidoSalto, sonidoCaminar;
+    public AudioClip sonidoSalto;
 
     private bool ViewRight = true;
     private Rigidbody2D rb;
     private BoxCollider2D bc;
     private int saltoRestante;
-
     private Animator anime;
+    private bool move = true;
 
     // Start is called before the first frame update
     void Start(){
@@ -49,14 +49,14 @@ public class CharacterController : MonoBehaviour{
             saltoRestante--;
             rb.velocity = new Vector2(rb.velocity.x, 0f);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            aM.PlaySound(sonidoSalto);
+            AudioManager.Instance.PlaySound(sonidoSalto);
         }
     }
     void movimiento(){
+        if(!move)return;
         float inputMovimiento = Input.GetAxis("Horizontal");
-        if(inputMovimiento != 0){
+        if(inputMovimiento != 0f){
             anime.SetBool("corriendo", true);
-            aM.PlaySound(sonidoCaminar);
         }else{
             anime.SetBool("corriendo", false);
         }
@@ -69,6 +69,30 @@ public class CharacterController : MonoBehaviour{
             ViewRight = !ViewRight;
             transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
         }
+    }
+
+    public void AplicarGolpe(){
+        move = false;
+        Vector2 direccionGolpe;
+
+        if(rb.velocity.x > 0){
+            direccionGolpe = new Vector2(-1,1);
+        }else{
+            direccionGolpe = new Vector2(1,1);
+        }
+
+        rb.AddForce(direccionGolpe * punchForce);
+
+        StartCoroutine(AplicarGolpeCorutina());
+    }
+
+    IEnumerator AplicarGolpeCorutina(){
+        yield return new WaitForSeconds(0.1f);
+        while(!suelo()){
+            yield return null;
+        }
+
+        move = true;
     }
 
 }

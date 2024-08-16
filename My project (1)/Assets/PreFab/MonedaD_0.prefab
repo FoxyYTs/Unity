@@ -147,4 +147,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valor: 1
-  gM: {fileID: 0}
+  sonidoPuntos: {fileID: 8300000, guid: d4849eeaf5201a541b8006a7588d4926, type: 3}
