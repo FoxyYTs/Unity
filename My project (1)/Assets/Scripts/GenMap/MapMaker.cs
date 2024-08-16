@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class MapMaker : MonoBehaviour{
-    public Tile tile;
+    public RuleTile tile;
     public Tilemap tilemap;
     public int mapWidth;
     public int mapHeight;

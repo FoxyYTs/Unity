@@ -5,7 +5,27 @@ using UnityEngine;
 public class CellularData : MonoBehaviour{
     public float fillPercent = 0.5f;
     public int iterations = 1;
+
     public int[,] GenerateData(int w, int h){
+        int[,] mapData = new int[w, h];
+        int y = 3;
+        while(y < h){
+            for(int x = 0; x < 16; x++){
+                if(x == 16){
+                    Debug.Log("aaadddaaadd");
+                    mapData[x+2,y] = 1;
+                    mapData[x+1,y] = 1;
+                    mapData[x,y] = 1;
+                    y+=4;
+                }
+            }
+        }
+        
+
+        return mapData;
+    }   
+
+    public int[,] GeneratseData(int w, int h){
         int[,] mapData = new int[w, h];
 
         for(int x = 0; x < w; x++){
@@ -20,11 +40,7 @@ public class CellularData : MonoBehaviour{
         for(int x = 0; x < this.iterations; x++){
             for(int i = 0; i < w; i++){
                 for(int j = 0; j < h; j++){
-                    if(((i == 0) || (i== w - 1)) || (j == h - 1)){
-                        buffer[i, j] = 1;
-                        continue;
-                    }
-                    if(j == 0){
+                    if(((i == 0) || (i== w - 1)) || ((j == 0) || (j == h - 1))){
                         buffer[i, j] = 0;
                         continue;
                     }
