@@ -806,7 +806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 609f217708eb14f4280d47d92b3c2085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fillPercent: 0.3
+  fillPercent: 0.9
   iterations: 10
 --- !u!4 &932516809
 Transform:

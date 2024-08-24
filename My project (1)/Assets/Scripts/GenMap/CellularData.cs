@@ -12,12 +12,15 @@ public class CellularData : MonoBehaviour{
         while(y < (h/1.5)){
             for(int x = 0; x < w; x++){
                 float rand = Random.Range(0f, 1f);
-                if(x == 17){
+                int miss = Random.Range(2, 16);
+                Debug.Log(rand);
+
+                if(rand < fillPercent && x == 17){
                     Platform(0, mapData, x, y);
-                }else if(x == 0){
+                }else if(rand > fillPercent && x == 0){
                     Platform(1, mapData, x, y);
-                }else if(rand < fillPercent){
-                    Platform(2, mapData, x, y);
+                }else if(x != 0 && x != 17){
+                    Platform(2, mapData, miss, y);
                 }
                 y+=3;
                 
