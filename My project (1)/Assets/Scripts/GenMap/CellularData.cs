@@ -9,21 +9,38 @@ public class CellularData : MonoBehaviour{
     public int[,] GenerateData(int w, int h){
         int[,] mapData = new int[w, h];
         int y = 3;
-        while(y < h){
-            for(int x = 0; x < 16; x++){
-                if(x == 16){
-                    Debug.Log("aaadddaaadd");
-                    mapData[x+2,y] = 1;
-                    mapData[x+1,y] = 1;
-                    mapData[x,y] = 1;
-                    y+=4;
+        while(y < (h/1.5)){
+            for(int x = 0; x < w; x++){
+                float rand = Random.Range(0f, 1f);
+                if(x == 17){
+                    Platform(0, mapData, x, y);
+                }else if(x == 0){
+                    Platform(1, mapData, x, y);
+                }else if(rand < fillPercent){
+                    Platform(2, mapData, x, y);
                 }
+                y+=3;
+                
             }
+        }        
+        return mapData;
+    }
+    private void Platform(int tipo, int[,] mapData, int x, int y){
+        if(tipo == 0){
+            mapData[x-2, y] = 1;
+            mapData[x-1, y] = 1;
+            mapData[x, y] = 1;
+        }else if(tipo == 1){
+            mapData[x, y] = 1;
+            mapData[x+1, y] = 1;
+            mapData[x+2, y] = 1;
+        }else if(tipo == 2){
+            mapData[x-1, y] = 1;
+            mapData[x, y] = 1;
+            mapData[x+1, y] = 1;
         }
         
-
-        return mapData;
-    }   
+    }  
 
     public int[,] GeneratseData(int w, int h){
         int[,] mapData = new int[w, h];

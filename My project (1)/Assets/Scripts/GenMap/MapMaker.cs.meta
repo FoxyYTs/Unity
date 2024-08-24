@@ -3,7 +3,11 @@ guid: 04d8e28fed4c78843bdbb6c544ca7417
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - tile: {fileID: 11400000, guid: 3821cf7b990a28644945c181bc87f6cb, type: 2}
+  - tilemap: {instanceID: 0}
+  - cell: {instanceID: 0}
+  - perlin: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
